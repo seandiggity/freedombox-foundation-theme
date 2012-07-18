@@ -17,6 +17,7 @@ Directory containing the "freedomboxfoundation" theme.  These files are not very
 freedomboxfoundation/img contains all the images you'll need, plus other images we use for the freedombox and sources such as GIMP .xcf and SVG files
 freedomboxfoundation/js contains minified JavaScript, source tarballs, and LibreJS licensing information
 freedomboxfoundation/local.css is the modified stylesheet, which is not very useful without page.tmpl
+src/ contains source files we don't need to distribute with the theme but are kept for historical purposes, such as old mockups
 
 On Debian-based GNU/Linux distributions, copy the files in this directory to /usr/share/ikiwiki/themes/ and run ikiwiki -setup or rebuild your wiki to see the results.  Then, browse to <yourwikiurl>/ikiwiki.cgi?do=setup and enable the "freedomboxfoundation" theme.
 
@@ -27,19 +28,20 @@ Directory containing an example that can be used to tweak/configure your own the
 style.css is the default ikiwiki stylesheet, you don't want to edit this
 local.css is the stylesheet you want to edit
 wiki.html is the HTML file you should view in a browser to see the results of your changes
+home.html is the HTML file for the design of the foundation homepage, much of this will likely be split out into a separate ikiwiki template (like home.tmpl)
 
-##Installation
+## Installation
 
 The bare minimum is given here. For detailed ikiwiki installation instructions see [[http://ikiwiki.info]].
 
-###Templates
+### Templates
 
 On Debian-based GNU/Linux distributions, copy the files in this directory to /usr/share/ikiwiki/templates/ and run ikiwiki -setup or rebuild your wiki to see the results.  If this is your first wiki, you can run:
 sudo ikiwiki --setup /etc/ikiwiki/auto.setup
 
 ^ assuming that you have taken a look at auto.setup and edited it accordingly.
 
-###Theme
+### Themes
 
 On Debian-based GNU/Linux distributions, copy the files in this directory to /usr/share/ikiwiki/themes/ and run ikiwiki -setup or rebuild your wiki to see the results.  If this is your first wiki, you can run:
 sudo ikiwiki --setup /etc/ikiwiki/auto.setup
