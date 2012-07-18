@@ -1,0 +1,36 @@
+FreedomBox Foundation Theme v0.2
+
+Copyright 2012 FreedomBox Foundation
+Licensed under the GNU Affero GPL v3.0 or any later version
+http://www.gnu.org/licenses/agpl.html
+
+Designed and built by Sean "Diggity" O'Brien (me@seandiggity.com) and Robert Martinez (mail@mray.de)
+FreedomBox and FreedomBox Foundation logos designed by Robert Martinez
+Source available at https://github.com/seandiggity/freedombox-foundation-theme
+
+Think Simple CSS by Marija Zaric (http://marijazaric.com) (http://freehtml5templates.com)
+distributed by http://freehtml5templates.com under CC-BY 3.0
+http://creativecommons.org/licenses/by/3.0/us/
+
+HTML5 Reset CSS (http://html5reset.org) distributed under the BSD 2-Clause license
+http://www.opensource.org/licenses/BSD-2-Clause
+
+Lato font by Lukasz Dziedzic (http://google.com/webfonts/specimen/Lato) distributed under OFL 1.1
+http://scripts.sil.org/OFL
+
+Icons from Glyphicons Free (http://glyphicons.com/) distributed under CC-BY 3.0
+http://creativecommons.org/licenses/by/3.0/
+
+Modernizr JavaScript (http://modernizr.com) distributed under MIT (Expat) and BSD 3-Clause licenses
+http://www.jclark.com/xml/copying.txt
+http://www.opensource.org/licenses/BSD-3-Clause
+
+HTML5 Shiv JavaScript (https://github.com/aFarkas/html5shiv) distributed under MIT (Expat) and GPL v2.0
+http://www.jclark.com/xml/copying.txt
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+SWFObject JavaScript (http://code.google.com/p/swfobject) distributed under the MIT (Expat) license
+http://www.jclark.com/xml/copying.txt
+
+Please see themes/freedomboxfoundation/javascript.html for full JavaScript sources
+

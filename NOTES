@@ -1,0 +1,64 @@
+NOTES - FreedomBox Foundation Website Theme
+===============
+
+2012-07-18 - Sean "Diggity" O'Brien (me@seandiggity.com)
+---------
+### ikiwiki updates, related bugs
+* This has been updated for ikiwiki and is very close to being ready for the freedomboxfoundation site.  However, I'm having some trouble with the TMPL_VAR variables such as BASEURL, RSSURL, and ATOMURL (BASEURL being the most important).  It could just be my ikiwiki install but, to make sure it runs correctly, I've removed most of the loops and if/else statements from the template markup.
+
+* ikwiki has a lot of navigation that isn't showing on the current foundation site, but we may want (Help for example).  Also, do we want the search engine?  How about breadcrumb navigation?
+
+* New ikiwiki template needs to made for the homepage and then the actual wiki markup for that page needs to include the correct wiki syntax to refer to the template.  It can be done, but it needs to be done gracefully...we don't want the embedded video showing up strangely or not at all.
+
+* CSS for the footer ribbon at the bottom needs to be fixed, as well as some other minor CSS tweaks
+
+* How are we going to make sure the current navigation link at the top is always correct?  Can we do this with TMPL markup?
+
+### Licensing
+* I've added JavaScript Web Labels for LibreJS and the un-minified JavaScript source, as well as updated the licensing info a bit.  
+
+* Google Analytics JavaScript was removed.  Still not sure how this got in, maybe it came with the Twitter BootStrap HTML.
+
+* Not sure if the foundation logo falls under a CC-BY or CC-BY-SA license, so we don't have specific licensing info for that.
+
+* Should we have Copyright/Licensing info at the bottom of the theme/page template?
+
+2012-03-31 - Sean "Diggity" O'Brien (me@seandiggity.com)
+---------
+### Intro Text:
+* Lowered line height for header text
+
+* Changed intro quote color to #4c4c4c as in mockup
+
+* Changed intro quote signature color to #b3b3b3 as in mockup (perhaps too light now?)
+
+* I like the weight of the font for h1, h2, h3 right now, as well as the text-shadow.  I did lighten it up a little, and now I think it directs the eyes to the correct places without detracting from other page content.  Perhaps the word-spacing or kerning needs to be adjusted.
+
+### Top Banner:
+* Changed thin banner to flat color #1771cf as in mockup
+
+* Thick banner gradient doesn't look exactly like the mockup (where the gradient is very subtle as well).  Currently accomplishing this in CSS using background-image:linear-gradient(); should we use a PNG in background-image:url() for exactness?
+
+* Shrunk top margin for logotype.  I'm not convinced it needs to change, seems to be utilizing the space available well.  Is there a reason I'm missing that the navigation text can't just slide left with translations or new menu items?  I understand it doesn't conform to the grid for the rest of the design, so I'm open to other solutions; my worry is that having it left-aligned would crowd the other visual elements.
+
+* I'm not crazy about the font color/style of the top navigation.  I played around with other combinations, and the only one visually pleasing was a light cyan, and that makes the site too "twitterish".  So, I'm happy to defer to others there.
+
+### Main Content/News:
+* I think it's a good idea to truncate the latest wiki post and give just a summary and a link.  Much more pleasing and compact for a homepage, and it entices people to look at other parts of the site.
+
+* Those who want to see past news items can just look in the archives.  I'm not particularly attached to calling the header "News Archive".
+
+* Added RSS/Atom links, as close to the mockup style as possible.
+
+### Footer:
+* We need some sort of visual separation for the translations, it's a very prominent box on the current site.  I think this new footer accomplishes the goal without being too "loud".
+
+### Big things that still need to be done:
+* Actually making it look the same on ikiwiki.  Since it's a wiki + versioning system, I'm hesitant to push changes...perhaps we need a testing environment for this?  Let me know what you think is best for collaboration, I'm happy to throw this up on my github account.
+
+* Taking a close look at style.css (ikiwiki styles) and make sure there won't be any conflicts with local.css as we go down the road.  Right now, the HTML5 Reset styles seem to be taking care of any problems.
+
+* Making sure this looks right on small screens.  Rather than negate most of the Bootstrap styles with my own, I started with a base HTML5 "responsive" template.  However, there are some glitches because of that approach that need to be ironed out, and some minor problems with the layering of divs, spacing, etc.  The container divs especially need to be tweaked.
+
+* I'm using a mostly-transparent PNG for the shadow effect; the box-shadow effects in CSS didn't look right and I couldn't achieve the same effect.  Maybe they should be more subdued, maybe not, but we need to make sure they don't look like scrollbars (esp. on a small screen).
+

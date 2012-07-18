@@ -1,0 +1,547 @@
+/*! 
+ * FreedomBox Foundation Theme v0.2
+ * 
+ * Copyright 2012 FreedomBox Foundation
+ * Licensed under the GNU Affero GPL v3.0 or any later version
+ * http://www.gnu.org/licenses/agpl.html
+ *
+ * Designed and built by Sean "Diggity" O'Brien (me@seandiggity.com) and Robert Martinez (mail@mray.de)
+ * FreedomBox and FreedomBox Foundation logos designed by Robert Martinez
+ * Source available at https://github.com/seandiggity/freedombox-foundation-theme
+ * 
+ * Think Simple CSS by Marija Zaric (http://marijazaric.com) (http://freehtml5templates.com)
+ * distributed by http://freehtml5templates.com under CC-BY 3.0
+ * http://creativecommons.org/licenses/by/3.0/us/
+ * 
+ * HTML5 Reset CSS (http://html5reset.org) distributed under the BSD 2-Clause license
+ * http://www.opensource.org/licenses/BSD-2-Clause
+ * 
+ * Lato font by Lukasz Dziedzic (http://google.com/webfonts/specimen/Lato) distributed under OFL 1.1
+ * http://scripts.sil.org/OFL
+ * 
+ * Icons from Glyphicons Free (http://glyphicons.com/) distributed under CC-BY 3.0
+ * http://creativecommons.org/licenses/by/3.0/
+ */
+
+/* HTML5 Reset: Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}									
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+ 
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+ 
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }  
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+/* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
+body {font: 13px Helmet, Freesans, sans-serif;}
+
+/* using local fonts? make sure to read up on Paul Irish's 
+	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+/* we like off-black for text */
+body, select, input, textarea {color: #333;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+}
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+/* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+	
+		
+}
+
+@media all and (orientation: portrait) {
+	
+}
+
+@media all and (orientation: landscape) {
+	
+}
+
+/* Global styles: Needs to be incorporated into the correct spots above ^
+-------------------------------------------------------------------------------*/
+/* Import Lato font */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,700); 
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+html, body {
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #4c4c4c;
+	margin: 0 0 1px;
+	line-height: 1.5;
+	background: #fff url("img/bg.png") left top repeat;
+}
+p {
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	margin-bottom: 7px;
+}	
+a, p a {
+	text-decoration: none;
+	color: #348BE6;
+}
+a:hover {
+	text-decoration: underline;
+	color: #348BE6;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	position: relative;
+}	
+h1 {
+	font-size: 60px;
+	line-height: 1.4;
+	color: #3588D7;
+	text-transform: capitalize;
+	text-align: left;
+	text-shadow: 0 1px 0 #0354A9;
+	word-spacing: .1em;
+}	
+h2 {
+	font-size: 36px;
+	line-height: 1.4;
+	color: #3588D7;
+	text-align: left;
+	text-shadow: 0 1px 0 #0354A9;
+	word-spacing: .1em;
+}	
+h3 {
+	font-size: 28px;
+	line-height: 1.4;
+	color: #3588D7;
+	text-align: left;
+	margin-bottom: 9px;
+	text-shadow: 0 1px 0 #0354A9;
+	word-spacing: .1em;
+}	
+
+/* Containers
+-------------------------------------------------------------------------------*/
+#container, #container-left, #container-right {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#container-top {
+	width: 100%;
+	height: 120px;
+	background: transparent url("img/stripe-top.png") top left repeat-x;
+}
+#container-bottom {
+	width: 100%;
+	height: 120px;
+	background: transparent url("img/stripe-bottom.png") top left repeat-x;
+}
+#container {
+	position: relative;
+	width: 980px;
+	height: 860px;
+	margin: 0 auto;			
+	text-align: left;
+	background-color: #fff;
+	padding: 0;
+}
+#container-shadow {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	background: transparent url("img/shadow.png") top left repeat;
+	padding: 0;
+}
+
+/* Header
+-------------------------------------------------------------------------------*/			
+header {
+	position: relative;
+	margin: 0 auto;
+	float: center;
+	width: 980px;
+	height: 120px;
+	background-image: linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -o-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -moz-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -webkit-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -ms-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.02, rgb(49,137,224)),
+	color-stop(0.76, rgb(54,140,233))
+	);
+}
+#header-shadow {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	background: transparent url("img/shadow.png") top left repeat;
+	padding: 0;
+}
+
+/* Intro
+-------------------------------------------------------------------------------*/
+#intro {
+	width: 960px;
+	position: relative;
+	float: left;
+	height: 318px;
+	margin: 25px;
+	margin-bottom: 60px;
+}
+.intro-column-left {
+	width: 420px;
+	padding: 10px;
+	float: left;
+}
+.intro-column-right {
+	width: 380px;
+	background: transparent;
+	padding: 10px;
+	float: right;
+	margin-right: 50px;
+}
+
+/* Main content
+-------------------------------------------------------------------------------*/
+.main-content {
+	position: relative;
+	float: left;
+	width: 100%;
+	margin: 15px 0 0 0;
+	background: url("img/line.png") 0 -18px no-repeat;
+}
+.main-content00 {
+	float: left;
+	width: 90%;
+	position: relative;
+	margin: 0 29px 0 34px;
+}
+.main-content01 {
+	float: left;
+	width: 470px;
+	position: relative;
+	margin: 0 29px 0 34px;
+}
+.main-content02 {
+	float: left;
+	position: relative;
+	margin: 0 0 0 10px;
+}
+
+/* Footer
+-------------------------------------------------------------------------------*/
+footer {
+	position: relative;
+	margin: 0 auto;
+	float: center;
+	width: 980px;
+	height: 120px;
+	background-color: #DAE1E6;
+	/*background-image: linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -o-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -moz-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -webkit-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -ms-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.02, rgb(49,137,224)),
+	color-stop(0.76, rgb(54,140,233))
+	);*/
+}
+#footer-shadow {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	background: transparent url("img/shadow.png") top left repeat;
+	padding: 0;
+}
+
+/* Nav menus
+-------------------------------------------------------------------------------*/
+nav {
+	position: absolute;
+	width: 620px;
+	top: 72px;
+	right: -12px;
+}
+nav ul li {
+	float: left;
+	line-height: normal;	
+}
+nav ul li a {
+	font-size: 20px;
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-transform: capitalize;
+	font-weight: bold;
+	display: block;	/* IE6, IE7 line height fix */
+	padding: 15px;
+	margin-top: 0px;
+	margin-right: 6px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #004083;
+}
+nav ul li a:hover{
+	color: #43FF55;
+	text-decoration: none;
+}
+nav ul li a.current{
+	color: #92ff9c;
+	text-decoration: none;
+}
+.nav-bottom {
+	color: #4c4c4c;
+	float: left;
+	width: 100%;
+	position: relative;
+	font-size: 14px;
+	margin: 60px 29px 0 34px;
+}
+.nav-bottom li {
+	display: inline;
+	padding: 0 18px 0 0;
+}
+.nav-bottom a, .nav-bottom li a {
+	color: #0156AC;
+	text-decoration: none;
+}
+.nav-bottom a:hover, .nav-bottom li a:hover {
+	text-decoration: underline;
+}
+#feedlink {
+	float: right;
+	margin: 25px;
+}
+#feedlink li, #feedlink li a {
+	display: inline;
+	text-decoration: none;
+	border: 0;
+	margin: 10px 3px 3px 0;
+	font-size: 16px;
+}
+
+/* Image styles, text styles to be rendered last
+-------------------------------------------------------------------------------*/
+#logo {
+	position: relative;
+   	float: left;
+   	padding: 10px 3px 0 10px;
+	width: 325px;
+	height: 85px;
+}
+.underline {
+	position: relative;
+   	float: right;
+	width: 600px;
+	height: 11px;
+}
+.clearing {
+	clear: both;
+	display: inline;
+	width: 100%;
+	height: 0;
+	overflow:hidden;
+}
+.intro-video {
+	padding:25px;
+	float:right;
+}
+.intro-quote {
+	color: #4c4c4c;
+	font-size: 16px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 15px;
+}
+.intro-quote-sig {
+	color: #b3b3b3;
+	font-style: italic;
+	float: right;
+	margin-bottom: 10px;
+}
+.intro-quote-link {
+	float: left;
+	margin-top: 10px;
+}
+.read-more {
+	color: #0156AC;
+	font-size: 18px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 15px;
+}
+.read-more a {
+	color: #0156AC;
+	text-decoration: none;
+}
+.read-more a:hover {
+	color: #0156AC;
+	text-decoration: underline;
+}
+.news-item {
+	font-size: 16px;
+}
+.rss {
+	color: #41C44C;
+}
+.rss a {
+	color: #fff;
+	background-color: #41C44C;
+	padding: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.rss a:hover {
+	color: #fff;
+	background-color: #30A23A;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#otherlanguages {
+	color: #4c4c4c;
+	font-size: 14px;
+	line-height: 1.8;
+	padding: 15px 25px 0 32px;
+}
+#otherlanguages ul {
+	padding:0;
+	margin:0;
+}
+#otherlanguages li {
+	display: inline;
+	padding: 8px 8px 0 0;
+}
+#otherlanguages a, #otherlanguages li a {
+	color: #0156AC;
+	text-decoration: none;
+}
+#otherlanguages a:hover, #otherlanguages li a:hover {
+	text-decoration: underline;
+}
