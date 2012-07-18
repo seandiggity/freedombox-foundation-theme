@@ -6,11 +6,14 @@ Files for [[ikiwiki|http://ikiwiki.info]] themes and templates.  These were put 
 
 ### Templates
 
-Directory containing new templates as well as changes to default ikiwiki template files.  These files are not very useful without the "freedomboxfoundation" theme. Most important are the modifications to page.tmpl
+Directory containing new templates as well as changes to default ikiwiki template files.  These files are not very useful without the "freedomboxfoundation" theme. 
+
+page.tmpl template for all wiki pages
+home.tmpl is a very rough template of what the homepage should look like.  Right now it's not much of a template at all.
 
 On Debian-based GNU/Linux distributions, copy the files in this directory to /usr/share/ikiwiki/templates/ and run ikiwiki -setup or rebuild your wiki to see the results.
 
-### Theme
+### Themes
 
 Directory containing the "freedomboxfoundation" theme.  These files are not very useful without our modified ikiwiki templates.
 
