@@ -1,6 +1,11 @@
 NOTES - FreedomBox Foundation Website Theme
 ===============
 
+2012-07-23 - Mathieu Jourdan
+---------
+### ikiwiki updates
+* fixed html markup causing footer ribbon being ignored
+
 2012-07-18 - Sean "Diggity" O'Brien (me@seandiggity.com)
 ---------
 ### ikiwiki updates, related bugs
