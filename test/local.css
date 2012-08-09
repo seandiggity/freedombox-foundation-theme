@@ -249,7 +249,8 @@ h3 {
 }
 #container-top {
 	width: 100%;
-	height: 120px;
+	height: 277px;
+	margin-bottom: -139px;
 	background: transparent url("img/stripe-top.png") top left repeat-x;
 }
 #container-bottom {
@@ -281,19 +282,11 @@ header {
 	margin: 0 auto;
 	float: center;
 	width: 980px;
-	height: 120px;
-	background-image: linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
-	background-image: -o-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
-	background-image: -moz-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
-	background-image: -webkit-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
-	background-image: -ms-linear-gradient(bottom, rgb(49,137,224) 2%, rgb(54,140,233) 76%);
-	background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.02, rgb(49,137,224)),
-	color-stop(0.76, rgb(54,140,233))
-	);
+	height: 138px;
+	background: url(img/header-bg.png) no-repeat;
+	background-size: 100% 100%;
+	border-left: 10px solid rgba(0, 0, 0, 0.1);
+  border-right: 10px solid rgba(0, 0, 0, 0.1);
 }
 #header-shadow {
 	position: relative;
