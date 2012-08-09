@@ -316,7 +316,6 @@ header {
 	position: relative;
 	float: left;
 	width: 100%;
-	margin: 15px 0 0 0;
     background: url("../img/line.png") -26px -19px no-repeat #fff;
 }
 .main-content00 {
@@ -363,10 +362,12 @@ footer {
 /* Nav menus
 -------------------------------------------------------------------------------*/
 nav {
-	position: absolute;
-	width: 620px;
-	top: 72px;
-	right: -12px;
+    left: 75px;
+    position: absolute;
+    top: 90px;
+    width: 620px;
+    background: url("img/underline.png") no-repeat 10px 47px;
+    z-index: 1;
 }
 nav ul li {
 	float: left;
@@ -379,11 +380,10 @@ nav ul li a {
 	text-transform: capitalize;
 	font-weight: bold;
 	display: block;	/* IE6, IE7 line height fix */
-	padding: 15px;
-	margin-top: 0px;
-	margin-right: 6px;
+	padding: 15px 12px 15px 10px;
+	margin: 0;
 	text-decoration: none;
-	text-shadow: 0 1px 0 #004083;
+	text-shadow: 1px 1px 0 #1566bc;
 }
 nav ul li a:hover{
 	color: #43FF55;
