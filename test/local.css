@@ -223,11 +223,11 @@ h1 {
 	word-spacing: .1em;
 }	
 h2 {
-	font-size: 36px;
-	line-height: 1.4;
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 1.2;
 	color: #3588D7;
 	text-align: left;
-	text-shadow: 0 1px 0 #0354A9;
 	word-spacing: .1em;
 }	
 h3 {
@@ -444,8 +444,8 @@ nav ul li a.current{
 -------------------------------------------------------------------------------*/
 #logo {
 	position: relative;
-   	float: left;
-   	padding: 10px 3px 0 10px;
+  float: left;
+  padding: 28px 0px 0 24px;
 	width: 325px;
 	height: 85px;
 }
