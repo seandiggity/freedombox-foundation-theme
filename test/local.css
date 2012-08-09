@@ -210,33 +210,28 @@ a:hover {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: Lato, Arial, Helvetica, sans-serif;
-	font-weight: normal;
+	font-weight: 300;
 	position: relative;
 }	
 h1 {
-	font-size: 60px;
-	line-height: 1.4;
+	font-size: 40px;
 	color: #3588D7;
 	text-transform: capitalize;
 	text-align: left;
-	text-shadow: 0 1px 0 #0354A9;
 	word-spacing: .1em;
 }	
 h2 {
 	font-size: 28px;
 	font-weight: 300;
-	line-height: 1.2;
 	color: #3588D7;
 	text-align: left;
 	word-spacing: .1em;
 }	
 h3 {
 	font-size: 28px;
-	line-height: 1.4;
 	color: #3588D7;
 	text-align: left;
 	margin-bottom: 9px;
-	text-shadow: 0 1px 0 #0354A9;
 	word-spacing: .1em;
 }	
 
@@ -293,7 +288,9 @@ header {
 	float: left;
 	height: 318px;
 	padding: 25px 0 85px;
+	margin-bottom: 35px;
     background-color: white;
+    background: url("img/line.png") no-repeat scroll -104px 424px #FFFFFF;
 }
 .intro-column-left {
 	width: 320px;
@@ -312,7 +309,7 @@ header {
 	float: left;
 	width: 710px;
 	padding: 40px 85px 0 85px;
-    background: url("../img/line.png") -26px -19px no-repeat #fff;
+	background-color: white;
 }
 .main-content00 {
 	float: left;
@@ -407,16 +404,17 @@ nav ul li a.current{
 .nav-bottom a:hover, .nav-bottom li a:hover {
 	text-decoration: underline;
 }
-#feedlink {
+ #feedlink {
 	float: right;
-	margin: 25px;
+}
+.main-content02 #feedlink {
+	float: left;
 }
 #feedlink li, #feedlink li a {
 	display: inline;
 	text-decoration: none;
 	border: 0;
 	margin: 10px 3px 3px 0;
-	font-size: 16px;
 }
 
 /* Image styles, text styles to be rendered last
@@ -467,10 +465,7 @@ nav ul li a.current{
 	margin-top: 15px;
 	margin-right: 15px;
 }
-.read-more a {
-	color: #0156AC;
-	text-decoration: none;
-}
+
 .read-more a:hover {
 	color: #0156AC;
 	text-decoration: underline;
@@ -484,7 +479,7 @@ nav ul li a.current{
 .rss a {
 	color: #fff;
 	background-color: #41C44C;
-	padding: 5px;
+	padding: 1px 6px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
@@ -494,6 +489,11 @@ nav ul li a.current{
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+.feedbutton {
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+}
+
 #otherlanguages {
 	color: #4c4c4c;
 	font-size: 14px;
